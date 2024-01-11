@@ -14,35 +14,14 @@
 
   <link href="./style/bootstrap.min.css" rel="stylesheet">
   <link href="./style/custom.css" rel="stylesheet">
+
+  <script src="./script/jquery.min.js"></script>
+  <script src="./script/bootstrap.min.js"></script>
 </head>
 
 <body>
 
-  <header>
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-      <img src="./images/openorglogo.png" class="menu-logo" />
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
-        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav mr-auto">
-
-        </ul>
-        <form class="form-inline mt-2 mt-md-0">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="#">Home <span
-                  class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-          </ul>
-        </form>
-      </div>
-    </nav>
-  </header>
+  <div id="header"></div> <!--  Dynamic header Div  -->
 
   <main role="main" id="main">
     <div>
@@ -57,27 +36,30 @@
             <h3>Ado.Entity</h3>
             <p>Ado.Entity is an object-relational mapping framework for .NET applications. Object-relational mapping
               allows the use of database queries and operations with object-oriented programming languages.
-              <img src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat" class="img-fluid" alt="MIT License"></p>
-            <p><a class="btn btn-secondary" href="#"
-                role="button">View details</a></p>
+              <img src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat" class="img-fluid"
+                alt="MIT License">
+            </p>
+            <p><a class="btn btn-secondary" href="./AdoEntity" role="button">View details</a></p>
           </div><!-- /.col-lg-4 -->
           <div class="col-lg-4 projects-card-block">
             <img class="card-projects-logo" src="./images/CsvGrape.png" width="140" height="140">
             <h3>Csv Grape</h3>
             <p>A library that handles csv files and its metadata for js or typescript projects. Don't worry about csv
-              files . This library will process and perse csv data for you . Available in Nmp . 
-              <img src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat" class="img-fluid" alt="MIT License"></p>
-            <p><a class="btn btn-secondary" href="#"
-                role="button">View details</a></p>
+              files . This library will process and perse csv data for you . Available in Nmp .
+              <img src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat" class="img-fluid"
+                alt="MIT License">
+            </p>
+            <p><a class="btn btn-secondary" href="#" role="button">View details</a></p>
           </div><!-- /.col-lg-4 -->
           <div class="col-lg-4 projects-card-block">
             <img class="card-projects-logo" src="./images/UIGrape.png" width="140" height="140">
             <h3>UI Grape</h3>
             <p>UI Grape is a simple, modular and accessible component library that gives you the building blocks you
               need to build your React applications.Designed with composition in mind. Compose new components with ease.
-              <img src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat" class="img-fluid" alt="MIT License"></p>
-            <p><a class="btn btn-secondary" href="#"
-                role="button">View details</a></p>
+              <img src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat" class="img-fluid"
+                alt="MIT License">
+            </p>
+            <p><a class="btn btn-secondary" href="#" role="button">View details</a></p>
           </div><!-- /.col-lg-4 -->
         </div><!-- /.row -->
 
@@ -90,9 +72,22 @@
           <div class="col-md-7 order-md-2">
             <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span>
             </h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod
-              semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus
-              commodo.</p>
+            <p class="lead">avaScript (also known as ECMAScript) started its life as a simple scripting language for
+              browsers. At the time it was invented, it was expected to be used for short snippets of code embedded in a
+              web page — writing more than a few dozen lines of code would have been somewhat unusual. Due to this,
+              early web browsers executed such code pretty slowly. Over time, though, JS became more and more popular,
+              and web developers started using it to create interactive experiences.
+
+              Web browser developers responded to this increased JS usage by optimizing their execution engines (dynamic
+              compilation) and extending what could be done with it (adding APIs), which in turn made web developers use
+              it even more. On modern websites, your browser is frequently running applications that span hundreds of
+              thousands of lines of code. This is the long and gradual growth of “the web”, starting as a simple network
+              of static pages, and evolving into a platform for rich applications of all kinds.
+
+              More than this, JS has become popular enough to be used outside the context of browsers, such as
+              implementing JS servers using node.js. The “run anywhere” nature of JS makes it an attractive choice for
+              cross-platform development. There are many developers these days that use only JavaScript to program their
+              entire stack!</p>
           </div>
           <div class="col-md-5 order-md-1">
             <img class="featurette-image img-fluid mx-auto" src="./images/dev.jpg" data-holder-rendered="true"
@@ -105,29 +100,18 @@
       </div>
     </div>
 
-    <footer class="container">
-      <p class="float-right"><a href="#">Back to top</a></p>
-      <p>©2024 Open Range Org <a href="#">Privacy</a> · <a
-          href="#">Terms</a></p>
-    </footer>
+    <div id="footer"></div><!--  Dynamic footer Div  -->
+
   </main>
 
-  <script src="./stript/jquery-3.2.1.slim.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
-  <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-  <script src="./stript/popper.min.js"></script>
-  <script src="./stript/bootstrap.min.js"></script>
-  <script src="./stript/holder.min.js"></script>
-
-
-  <svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500" preserveAspectRatio="none"
-    style="display: none; visibility: hidden; position: absolute; top: -100%; left: -100%;">
-    <defs>
-      <style type="text/css"></style>
-    </defs><text x="0" y="25"
-      style="font-weight:bold;font-size:25pt;font-family:Arial, Helvetica, Open Sans, sans-serif">500x500</text>
-  </svg>
+  <script src="./script/custom.js"></script>
+  <script>
+    (function () {
+      const app = root();
+      app.loadHeader();
+      app.loadFooter();
+    })();
+  </script>
 </body>
 
 </html>
