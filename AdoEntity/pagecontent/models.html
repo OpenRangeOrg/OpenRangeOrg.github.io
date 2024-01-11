@@ -1,0 +1,22 @@
+<div class="blog-post">
+  <h2 class="blog-post-title">Models</h2>
+
+  <p>After Improting the namespace we need to create one POCO class which will hve same name as a table . That POCO need
+    to inharite the class AdoBase . That class should contain properties Where Property names and Column names of the
+    Table should be same . For Example, if we have a table called Users and it's having 5 columns
+    "Id(int)","Name(varchar(20))","Age(int)","IsAdmin(bit)","DOB(datetime)" then the mapping poco class is</p>
+  <pre>
+      <code class="language-csharp">class Users:AdoBase
+        {
+            [Primary]
+            public int Id { get; set; }
+            public string Name { get; set; }
+            public bool IsAdmin { get; set; }
+            public int Age { get; set; }
+            public DateTime DOB { get; set; }
+        }</code>
+    </pre>
+  <hr>
+  <p><a href="#" class="text-info">Note : We can use attribute like , Primary , Unique for a property . One class can
+      have only one property tith attribute primary . More then one primary attribute will throw error(runtime).</a></p>
+</div>
