@@ -1,0 +1,35 @@
+<div class="blog-post">
+  <h2 class="blog-post-title">Update row of a table</h2>
+
+  <p>To update a row of the table Users first we need to create a instance of Connection class where we need to pass
+    connection string . UpdateEntry helps to update data of a row . we need to pass an object of class "Users" in
+    UpdateEntry . Updating multiple rows also possible here .</p>
+  <pre>
+      <code class="language-csharp">//single row update
+        public DbConnection()
+        {
+            IConnection connection = new Connection(connectionString);
+            //data is a object of class Users .
+            connection.UpdateEntry<Users>(data);
+        } 
+  </code>
+    </pre>
+  <hr>
+  <h2 class="blog-post-title">Update multiple rows in a table</h2>
+
+  <p>To update a row of the table Users first we need to create a instance of Connection class where we need to pass
+    connection string . UpdateEntry helps to update data of a row . we need to pass an object of class "Users" in
+    UpdateEntry . Updating multiple rows also possible here .</p>
+  <pre>
+      <code class="language-csharp">//multiple row update
+        public DbConnection()
+        {
+            IConnection connection = new Connection(connectionString);
+            //dataList is List<Users>  .
+            connection.UpdateEntry<Users>(dataList);
+        }
+  </code>
+    </pre>
+  <hr>
+
+</div>
