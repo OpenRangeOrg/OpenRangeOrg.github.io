@@ -16,6 +16,9 @@
 .projects-card-block{
   text-align: center;
 }
+#footer{
+  margin-top: 20px;
+}
 body{
   overflow-x: hidden;
 }
@@ -59,4 +62,36 @@ body{
 }
 .content-text pre[class*=language-] {
   padding-bottom: 0px;
+  width: 100%;
+}
+.project-block-link:hover{
+  cursor: pointer;
+  color: #229977;
+}
+.list-group-item-info{
+  font-weight: bold;
+}
+.project-block-link.active-block{
+  color: #229977;
+  font-weight: bold;
+}
+#content-text .blog-post .code {
+  color: #229977;
+  background-color: #e0f9f1;
+  padding: 3px 5px;
+  border-radius: 3px;
+  font-size: 90%;
+}
+.library-logo{
+  height: 75px;
+}
+.small-text{
+  font-size: 14px;
+}
+.dev-card-block{
+  text-align: center;
+  margin: auto;
+}
+.dev-link a{
+  margin: 5px;
 }

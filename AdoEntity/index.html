@@ -12,6 +12,8 @@
   <title>Ado.Entity</title>
 
   <link href="../style/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+    integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
   <link href="../style/custom.css" rel="stylesheet">
   <link href="../style/prism.css" rel="stylesheet">
 
@@ -30,7 +32,7 @@
       </div>
       <div class="page-Content">
         <div class="left-bar col-md-3" id="left-bar">
-          
+
         </div>
         <div class="content-text col-md-9" id="content-text">
         </div>
@@ -50,10 +52,12 @@
       app.loadFooter();
       app.loadProjectHeader('AdoEntity');
       app.loadProjecSideBar('AdoEntity');
-      app.loadContentText('AdoEntity','introduction');
-      $(document).on('click','.data-file', ()=> {
-        var filename= $(this).attr("data")+'.html';
-        app.loadContentText('AdoEntity',filename);
+      app.loadContentText('AdoEntity', 'introduction');
+      $(document).on('click', '.project-block-link', function () {
+        var filename = $(this).attr("data-file");
+        app.loadContentText('AdoEntity', filename);
+        const projectBlockLinkList = $('.project-block-link');
+        app.resetActive(projectBlockLinkList, filename);
       });
     })();
   </script>
