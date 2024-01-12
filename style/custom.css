@@ -1,5 +1,6 @@
 .menu-logo{
   height: 40px;
+  margin-left: 20px;
 }
 #main{
   margin-top: 55px;
@@ -91,7 +92,25 @@ body{
 .dev-card-block{
   text-align: center;
   margin: auto;
+  border-bottom: 1px solid #eaeaea;
 }
 .dev-link a{
   margin: 5px;
+}
+#footer{
+  border-top: 1px solid #eaeaea;
+  padding: 20px 50px 0px 50px;
+}
+#footer a i{
+  font-size: 25px;
+  margin: 0px 5px
+}
+.nav-links a i{
+  font-size: 25px;
+}
+.theme-green{
+  color: #229977;
+}
+.theme-blue{
+  color: #227799;
 }

@@ -1,8 +1,9 @@
 const root = () => {
-    const rootPath = 'https://open-range-org.github.io';
+    const rootPath = 'http://localhost/openorg';
     const loadHeader = () => {
         $('#header').load(rootPath + '/common/header.html', () => {
             $('#logo').attr("src", rootPath + '/images/openorglogo.png');
+            $('.home-link').attr("href", rootPath);
         });
     };
     const loadFooter = () => {
