@@ -1,0 +1,32 @@
+<div class="blog-post">
+  <h2 class="blog-post-title"><i class="fas fa-quote-left"></i> Toast Component</h2>
+  <br />
+  <h4>Import</h4>
+  <pre>
+    <code class="language-javaScript">import { Toast } from 'ui-grape';
+    import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';</code>
+  </pre>
+  <br />
+  <h4>Code Example</h4>
+  <p>The Toast component allows you to create simple toast notifications. Here's an example of how you can use it:</p>
+  <pre>
+      <code class="language-markup">&lt;Toast
+        message="This toast will stay for 5 seconds."
+        duration={5000}
+        type="warning"
+        position="bottom-right"
+        padding="medium"
+        fontColor="#ff9800"
+      /&gt;
+  </code>
+    </pre>
+  <p>
+    In this example:
+  <ul>
+    <li>The first toast is a basic notification.</li>
+    <li>The second toast includes a success icon.</li>
+    <li>The third toast is customized with a longer duration, a warning type, a specific position and a larger padding.
+      Adjust the props according to your requirements and styling preferences.</li>
+  </ul>
+  </p>
+</div>
