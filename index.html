@@ -33,16 +33,17 @@
           <p>Open-source software is computer software that is released under a license in which the copyright holder
             grants users the rights to use, study, change, and distribute the software and its source code to anyone and
             for any purpose. Open-source software may be developed in a collaborative, public manner.</p>
-            <div class="banner-icon">
-              <a href="https://github.com/Open-range-org" class="theme-green" target="_blank"><i class="fab fa-github"></i></a>
-              <a href="mailto:openrangeorg@gmail.com" class="theme-green" ><i class="fas fa-envelope"></i></a>
-            </div>
+          <div class="banner-icon">
+            <a href="https://github.com/Open-range-org" class="theme-green" target="_blank"><i
+                class="fab fa-github"></i></a>
+            <a href="mailto:openrangeorg@gmail.com" class="theme-green"><i class="fas fa-envelope"></i></a>
+          </div>
         </div>
       </div>
     </div>
     <div class="row projects">
       <div class="col-md-10 offset-md-1">
-        <div class="col-sm-12 text-center mt-5 mb-3">
+        <div class="col-sm-12 text-center mt-5">
           <h1>Explore Projects</h1>
         </div>
         <div class="row py-5">
@@ -76,6 +77,41 @@
             </p>
             <p><a class="btn btn-secondary" href="./UIGrape" role="button">View details</a></p>
           </div>
+          <div class="col-lg-4 projects-card-block">
+            <img class="card-projects-logo" src="./images/googlyjs.png" width="140" height="140">
+            <h3><i class="fab fa-osi"></i> Googly.js</h3>
+            <p>Googly.js is a very lightweight javascript validation library . If you don't know how to handle
+              validation in javascript or if you are searching for a library which can help you to handle validation ,
+              this library is a good option.
+              <img src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat" class="img-fluid"
+                alt="MIT License">
+            </p>
+            <p><a class="btn btn-secondary project-not-ready" href="#" role="button">View details</a></p>
+          </div>
+          <div class="col-lg-4 projects-card-block">
+            <img class="card-projects-logo" src="./images/loggergrape.png" width="140" height="140">
+            <h3><i class="fab fa-osi"></i> Logger Grape</h3>
+            <p>Logger Grape is a tool which helps to analyse logs. It automatically updates the Log UI when the actual
+              file is being changed . The line highlight feature helps to differentiate between newly added logs and old
+              logs .
+              <img src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat" class="img-fluid"
+                alt="MIT License">
+            </p>
+            <p><a class="btn btn-secondary project-not-ready" href="#" role="button">View details</a></p>
+          </div>
+          <div class="col-lg-4 projects-card-block">
+            <img class="card-projects-logo" src="./images/jinglebell.png" width="140" height="140">
+            <h3><i class="fab fa-osi"></i> Jingle Bell</h3>
+            <p>Jingle Bell is a very lightweight Typescript library . This library helps you to manipulate DOM easily .
+              Build Typescript projects with less coding and easy syntax . Good option for small project or single page
+              web app.
+              <img src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat" class="img-fluid"
+                alt="MIT License">
+            </p>
+            <p><a class="btn btn-secondary project-not-ready" href="#" role="button">View details</a></p>
+          </div>
+
+
         </div>
 
 
@@ -124,6 +160,9 @@
       const app = root();
       app.loadHeader();
       app.loadFooter();
+      $(document).on('click', '.project-not-ready', function () {
+        alert("This project documentation is not ready yet . Sorry !!");
+      });
     })();
   </script>
 </body>

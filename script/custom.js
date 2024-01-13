@@ -1,5 +1,5 @@
 const root = () => {
-    const rootPath = 'https://open-range-org.github.io';
+    const rootPath = window.location.host == 'localhost'? 'http://localhost/openorg' : 'https://open-range-org.github.io';
     const loadHeader = () => {
         $('#header').load(rootPath + '/common/header.html', () => {
             $('#logo').attr("src", rootPath + '/images/openorglogo.png');
