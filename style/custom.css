@@ -129,10 +129,13 @@ body{
   align-items: center;
 }
 .banner-text{
-  padding: 80px;
+  padding-top: 50px;
   margin-left: 150px;
   width: calc(100% - 500px);
   max-width: 1000px;
+}
+.banner-icon{
+  margin-top: 20px;
 }
 .banner-icon i{
   font-size: 25px;
