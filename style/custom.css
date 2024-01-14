@@ -142,3 +142,16 @@ body{
   font-size: 25px;
   margin: 5px;
 }
+.demo-link{
+  color: #229977;
+  font-size: 25px;
+}
+.project-navigation{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+  justify-content: center;
+  gap: 10px;
+}
