@@ -1,0 +1,52 @@
+<div class="blog-post">
+  <h2 class="blog-post-title"><i class="fas fa-quote-left"></i> Update row of a table</h2>
+
+  <p>Suppose you have a class called Person with properties like Id, Name, Age, and Email. You want to convert a list of Person objects to a CSV file.
+    <ol>
+      <li> Create a list of Person objects</li>
+      <li>Add Header and Ordinal attribute for properties.</li>
+    </ol>
+   
+    </p>
+    <h3 class="blog-post-title">Design Model</h3>
+  <pre>
+      <code class="language-csharp">//Design Model
+public class PersonObject
+{
+    [Header("Id")]
+    [Ordinal(0)]
+    public Guid Id { get; set; }
+
+    [Header("Email")]
+    [Ordinal(1)]
+    public string Email { get; set; }
+	
+    [Header("User Name")]
+    [Ordinal(2)]
+    public string Name { get; set; }
+
+    [Header("Age")]
+    [Ordinal(3)]
+    public string Age { get; set; }
+
+    [Header("Email")]
+    [Ordinal(4)]
+    public string Email { get; set; }
+}
+  </code>
+    </pre>
+  <hr>
+  <h3 class="blog-post-title">Code Example</h3>
+  <pre>
+      <code class="language-csharp">//Example code
+using ObjectToCsv;
+
+
+List<PersonObject> users = GetTestObjectList();//get list of any object that you want to convert .
+
+var csvString = CsvUtil.BindCsv<PersonObject>(users); //call library to get csv string 
+  </code>
+    </pre>
+  <hr>
+
+</div>
