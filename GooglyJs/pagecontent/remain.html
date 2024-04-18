@@ -1,0 +1,21 @@
+<div class="blog-post">
+    <h2 class="blog-post-title"><i class="fas fa-quote-left"></i> Remain field</h2>
+
+    <p>To limit the maximum character count for a field and display the remaining characters to be typed, you can
+        utilize the “remain” attribute.<br />
+    <ul>
+        <li>Add the “maxlength” attribute to the input field. Set its value to a numeric limit representing the maximum
+            allowed characters.</li>
+        <li>To perform character remain calculation , use the valid tag with the type attribute set to remain</li>
+        <li>Map the for attribute to the corresponding text input field by setting its value to the same ID as the text
+            input field.</li>
+        <li>If you want to style the custom message with a specific colour, apply your custom CSS class. For instance,
+            if you’re using the Bootstrap CSS library and want a red-colored message, use the “text-danger” class.</li>
+    </ul>
+    <hr>
+    <pre>
+      <code class="language-html">&lt;textarea class="form-control" rows="10" cols="30" maxlength="250" data-validation="remain" id="textarea"&gt;&lt;/textarea&gt;
+        &lt;valid type="remain" for="textarea" class="text-info"&gt;&lt;/valid&gt;
+  </code>
+    </pre>
+</div>

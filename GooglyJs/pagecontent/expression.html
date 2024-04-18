@@ -1,0 +1,27 @@
+<div class="blog-post">
+  <h2 class="blog-post-title"><i class="fas fa-quote-left"></i> validate expression field</h2>
+
+  <p>To perform expression validation, use the valid tag with the type attribute set to expression<br />
+  <ul>
+    <li>Map the for attribute to the corresponding text input field by setting its value to the same ID as the text input field.</li>
+    <li>Customize the validation message by specifying the desired content for the message attribute.</li>
+    <li>Customize the validation message by specifying the desired content for the message attribute.nstance, if
+      yoCustomize the validation message by specifying the desired content for the message attribute.</li>
+    <li>mode attribute helps to check expression . need to mention what type of expression you want to validate . 4 options available :
+      <ul>
+        <li>num : Only numbers are allowed</li>
+        <li>char : Only characters are allowed"</li>
+        <li>pass : Only Number and Characters are allowed</li>
+        <li>mail : o=Only valid email pattern allowed</li>
+      </ul>
+    </li>
+    <li>If you want to style the custom message with a specific color, apply your custom CSS class. For instance, if you’re using the Bootstrap CSS library and want a red-colored message, use the “text-danger” class."</li>
+  </ul>
+  <hr>
+  <pre>
+    <code class="language-html">&lt;input type="text" placeholder="Enter Firstname" id="fname" class="form-control" /&gt;
+      &lt;valid type="expression" for="fname" mode="char"
+       msg="Only characters are allowed" class="text-danger"&gt;&lt;/valid&gt;
+</code>
+  </pre>
+</div>

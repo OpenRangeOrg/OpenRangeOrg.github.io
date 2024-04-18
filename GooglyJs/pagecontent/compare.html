@@ -1,0 +1,18 @@
+<div class="blog-post">
+  <h2 class="blog-post-title"><i class="fas fa-quote-left"></i> Compare field</h2>
+
+  <p>To compare values between two input fields, use the following validator:<br/>
+    <ul>
+      <li>Add the valid tag to the input field where you want to perform the comparison. Set the type attribute to compare.</li>
+      <li>Map the for attribute of the validator to the corresponding text input field by setting its value to the same ID as the text input field you want to compare (let’s call this (1)).</li>
+      <li>Map the with attribute of the validator to the other text input field by setting its value to the same ID as the second text input field (let’s call this (2)).</li>
+      <li>If the values of (1) and (2) don’t match, an error message saying Mismatch! will be displayed.</li>
+    </ul>
+  <hr>
+  <pre>
+    <code class="language-html">&lt;input type="password" placeholder="Enter Pass" id="pass" class="form-control" /&gt;
+&lt;input type="password" placeholder="Confirm Pass" id="confpass" class="form-control" /&gt;
+&lt;valid type="compare" for="confpass" with="pass"&gt;&lt;/valid&gt;
+</code>
+  </pre>
+</div>

@@ -1,0 +1,18 @@
+<div class="blog-post">
+  <h2 class="blog-post-title"><i class="fas fa-quote-left"></i> validate expression field</h2>
+
+  <p>To assess password strength and complexity, you can utilize the strength tag. This tag validates the following criteria: <br/>
+  <ul>
+    <li>Lowercase characters</li>
+    <li>Uppercase characters</li>
+    <li>Special characters</li>
+    <li>Numbers Additionally, it considers the total length of the password.</li>
+    </ul>
+    Map the for attribute to the corresponding input field by setting its value to the same ID as the text input field.
+  <hr>
+  <pre>
+    <code class="language-html">&lt;input type="password" placeholder="Enter Pass" id="pass" class="form-control"  /&gt;
+      &lt;strength for="pass"&gt;&lt;/strength&gt;
+</code>
+  </pre>
+</div>
