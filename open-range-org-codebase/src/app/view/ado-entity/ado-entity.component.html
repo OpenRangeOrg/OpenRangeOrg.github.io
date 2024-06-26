@@ -1,0 +1,364 @@
+<main role="main" id="main" class="mb-4">
+  <div class="content-body">
+    <div class="page-header" id="page-header">
+      <div class="name-logo">
+        <img class="card-projects-logo" src="../../../assets/AdoEntity.png" width="140" height="140">
+        <div class="details px-5 py-2">
+          <h1>Ado.Entity</h1>
+          Ado.Entity is an object-relational mapping framework for .NET applications. Object-relational mapping
+          allows the use of database queries and operations with object-oriented programming languages.
+        </div>
+      </div>
+
+      <div class="technical p-3">
+        <div class="technology">
+          <kbd>c#</kbd>
+          <kbd>.net</kbd>
+          <kbd>Orm</kbd>
+        </div>
+        <div class="tag">
+          <a href="https://www.nuget.org/packages/Ado.Entity.Core" rel="noopener noreferrer nofollow" class="me-1"><img
+            src="https://img.shields.io/nuget/v/Ado.Entity.Core.svg?style=plastic&logo=nuget" class="img-fluid"
+            alt="Ado.Entity Nuget"></a>
+          <img src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat" class="img-fluid"
+          alt="MIT License">
+        </div>
+
+      </div>
+    </div>
+    <div class="page-Content col-md-12" id="left-nav">
+      <div class="left-bar col-md-3" id="left-bar">
+        <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+          <div class="tab-header"><label><i class="fa-solid fa-file-signature"></i> Documentation</label></div>
+          <button class="nav-link active" id="v-pills-Introduction-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Introduction" type="button" role="tab" aria-controls="v-pills-Introduction" aria-selected="true"><i class="fa-solid fa-layer-group"></i> Introduction</button>
+          <button class="nav-link" id="v-pills-Models-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Models" type="button" role="tab" aria-controls="v-pills-Models" aria-selected="false"><i class="fa-solid fa-layer-group"></i> Models</button>
+          <button class="nav-link" id="v-pills-GetData-tab" data-bs-toggle="pill" data-bs-target="#v-pills-GetData" type="button" role="tab" aria-controls="v-pills-GetData" aria-selected="false"><i class="fa-solid fa-layer-group"></i> Get Data</button>
+          <button class="nav-link" id="v-pills-AddData-tab" data-bs-toggle="pill" data-bs-target="#v-pills-AddData" type="button" role="tab" aria-controls="v-pills-AddData" aria-selected="false"><i class="fa-solid fa-layer-group"></i> Add Data</button>
+          <button class="nav-link" id="v-pills-UpdateData-tab" data-bs-toggle="pill" data-bs-target="#v-pills-UpdateData" type="button" role="tab" aria-controls="v-pills-UpdateData" aria-selected="false"><i class="fa-solid fa-layer-group"></i> Update Data</button>
+          <button class="nav-link" id="v-pills-AdoEntityExample-tab" data-bs-toggle="pill" data-bs-target="#v-pills-AdoEntityExample" type="button" role="tab" aria-controls="v-pills-AdoEntityExample" aria-selected="false"><i class="fa-solid fa-layer-group"></i> Example</button>
+          <div class="tab-header mt-3"><label><i class="fa-solid fa-mug-hot"></i> Tech</label></div>
+          <button class="nav-link" id="v-pills-Library-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Library" type="button" role="tab" aria-controls="v-pills-Library" aria-selected="false"><i class="fa-solid fa-layer-group"></i> Library</button>
+          <button class="nav-link" id="v-pills-Contributors-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Contributors" type="button" role="tab" aria-controls="v-pills-Contributors" aria-selected="false"><i class="fa-solid fa-layer-group"></i> Contributors</button>
+        </div>
+      </div>
+      <div class="content-text col-md-9" id="content-text">
+        <div class="tab-content" id="v-pills-tabContent">
+          <div class="tab-pane fade show active" id="v-pills-Introduction" role="tabpanel" aria-labelledby="v-pills-Introduction-tab">
+            <div class="blog-post">
+              <h2 class="blog-post-title"><i class="fas fa-quote-left"></i>  Introduction</h2>
+
+              <p>Ado.Entity is an object-relational mapping framework for .NET applications. Object-relational mapping allows the
+                use of database queries and operations with object-oriented programming languages. It has similarty with Entity
+                framework But you must agree that , it is a lot simpler than Entity framework . If you don;t know about The entity ,
+                you can have a look here . Even if you are familier with Entity and trying to avoid complex Code First, Model First,
+                and Database First approaches , you can try this .</p>
+                <h5>Using NuGet Package Manager: </h5>
+                <ul>
+                  <li>Open your project in Visual Studio.</li>
+                  <li>Go to Tools > NuGet Package Manager > Manage NuGet Packages for Solution.</li>
+                  <li>Search for "ObjectToCsv" and install it.</li>
+                  <li>ObjectToCsv is a popular library that simplifies reading and writing CSV files in C#.</li>
+                </ul>
+
+              <br />You need to import Ado.Entity Namespace'
+              <pre>
+                <code class="language-csharp">
+    using Ado.Entity.Core;</code>
+              </pre>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="v-pills-Models" role="tabpanel" aria-labelledby="v-pills-Models-tab">
+            <div class="blog-post">
+              <h2 class="blog-post-title"><i class="fas fa-quote-left"></i>  Models</h2>
+
+              <p>After Improting the namespace we need to create one POCO class which will hve same name as a table . That POCO need
+                to inharite the class AdoBase . That class should contain properties Where Property names and Column names of the
+                Table should be same . For Example, if we have a table called Users and it's having 5 columns
+                <span class="code">"Id(int)"</span> ,<span class="code">"Name(varchar(20))"</span> ,<span class="code">"IsAdmin(bit)"</span> ,<span
+                  class="code">"Age(int)"</span> ,<span class="code">"DOB(datetime)"</span> then the mapping poco class is
+              </p>
+              <pre>
+                  <code class="language-csharp">
+      class Users:AdoBase
+      &#123;
+          [Primary]
+          public int Id &#123; get; set; &#125;
+          public string Name &#123; get; set; &#125;
+          public bool IsAdmin &#123; get; set; &#125;
+          public int Age &#123; get; set; &#125;
+          public DateTime DOB &#123; get; set; &#125;
+      &#125;</code>
+                </pre>
+              <hr>
+              <p><span class="text-info">Note : We can use attribute like , Primary , Unique for a property . One class can
+                  have only one property with attribute primary . More then one primary attribute will throw error(runtime).</span>
+              </p>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="v-pills-GetData" role="tabpanel" aria-labelledby="v-pills-GetData-tab">
+            <div class="blog-post">
+              <h2 class="blog-post-title"><i class="fas fa-quote-left"></i> Get data from table</h2>
+
+              <p>We need to follow very simple steps to get data from database . First we need to create a instance of Connection
+                class where we need to pass connection string . GetDataByQuery helps to get data from table . GetDataByQuery expects
+                sql query , which we need to pass when calling this method .</p>
+              <hr>
+              <pre>
+                <code class="language-csharp">
+      public DbConnection()
+      &#123;
+          IConnection connection = new Connection(connectionString);
+          var data=connection.GetDataByQuery&lt;Users&gt;("select * from Users");
+      &#125;</code>
+              </pre>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="v-pills-AddData" role="tabpanel" aria-labelledby="v-pills-AddData-tab">
+            <div class="blog-post">
+              <h2 class="blog-post-title"><i class="fas fa-quote-left"></i> Insert row in a table</h2>
+
+              <p>To Insert a row of the table Users first we need to create a instance of Connection class where we need to pass
+                connection string . AddEntry helps to insert a row . we need to pass an object of class "Users" in AddEntry . Adding
+                multiple rows also possible here .</p>
+                <pre>
+                  <code class="language-csharp">//single row Add
+      public DbConnection()
+      &#123;
+          IConnection connection = new Connection(connectionString);
+          //data is a object of class Users .
+          connection.AddEntry&lt;Users&gt;(data);
+      &#125;
+              </code>
+                </pre>
+              <hr>
+              <h2 class="blog-post-title">Insert multiple rows in a table</h2>
+
+              <p>To Insert a row of the table Users first we need to create a instance of Connection class where we need to pass
+                connection string . AddEntry helps to insert a row . we need to pass an object of class "Users" in AddEntry . Adding
+                multiple rows also possible here .</p>
+                <pre>
+                  <code class="language-csharp">//multiple row Add
+    public DbConnection()
+    &#123;
+        IConnection connection = new Connection(connectionString);
+        //dataList is List&lt;Users&gt;  .
+        connection.AddEntry&lt;Users&gt;(dataList);
+    &#125;
+              </code>
+                </pre>
+              <hr>
+
+            </div>
+          </div>
+          <div class="tab-pane fade" id="v-pills-UpdateData" role="tabpanel" aria-labelledby="v-pills-UpdateData-tab">
+            <div class="blog-post">
+              <h2 class="blog-post-title"><i class="fas fa-quote-left"></i> Update row of a table</h2>
+
+              <p>To update a row of the table Users first we need to create a instance of Connection class where we need to pass
+                connection string . UpdateEntry helps to update data of a row . we need to pass an object of class "Users" in
+                UpdateEntry . Updating multiple rows also possible here .</p>
+              <pre>
+                  <code class="language-csharp">//single row update
+    public DbConnection()
+    &#123;
+        IConnection connection = new Connection(connectionString);
+        //data is a object of class Users .
+        connection.UpdateEntry&lt;Users&gt;(data);
+    &#125;
+              </code>
+                </pre>
+              <hr>
+              <h2 class="blog-post-title">Update multiple rows in a table</h2>
+
+              <p>To update a row of the table Users first we need to create a instance of Connection class where we need to pass
+                connection string . UpdateEntry helps to update data of a row . we need to pass an object of class "Users" in
+                UpdateEntry . Updating multiple rows also possible here .</p>
+              <pre>
+                  <code class="language-csharp">//multiple row update
+    public DbConnection()
+    &#123;
+        IConnection connection = new Connection(connectionString);
+        //dataList is List&lt;Users&gt;  .
+        connection.UpdateEntry&lt;Users&gt;(dataList);
+    &#125;
+              </code>
+                </pre>
+              <hr>
+
+            </div>
+          </div>
+          <div class="tab-pane fade" id="v-pills-AdoEntityExample" role="tabpanel" aria-labelledby="v-pills-AdoEntityExample-tab">
+            <div class="blog-post">
+              <h2 class="blog-post-title"><i class="fas fa-quote-left"></i> Example</h2>
+
+              <p>Lets have one exaple to understand the full implementation </p>
+
+              <h4>UserModel.cs</h4>
+              <pre>
+                  <code class="language-csharp">[Table("user")]
+                    public class User
+                    &#123;
+                        [Column("id")]
+                        public Guid Id &#123; get; set; &#125;
+                        [Column("first_name")]
+                        public string FirstName &#123; get; set; &#125;
+                        [Column("last_name")]
+                        public string LastName &#123; get; set; &#125;
+                        [Column("email")]
+                        public string Email &#123; get; set; &#125;
+                        [Column("user_name")]
+                        public string UserName &#123; get; set; &#125;
+                        [Column("password")]
+                        public string Password &#123; get; set; &#125;
+                        [Column("phone")]
+                        public string Phone &#123; get; set; &#125;
+                    &#125;
+                </code>
+              </pre>
+              <hr /><br />
+              <h4>UserConnection.cs</h4>
+              <pre>
+                <code class="language-csharp">
+                  public class UserConnection
+                  &#123;
+                    public async Task&lt;bool&gt; AddUser(User user)
+                      &#123;
+                          try
+                          &#123;
+
+                              IConnection connection = new Connection(AppConfigValue.ConnectionString);
+                              var response =connection.AddEntryByModel&lt;User&gt;(user);
+                              return response;
+                          &#125;
+                          catch (Exception ex)
+                          &#123;
+                              throw new Exception(ex.Message);
+                          &#125;
+                      &#125;
+                      public async Task&lt;User&gt; GetUserByEmail(string email)
+                      &#123;
+                          try
+                          &#123;
+                              string commandText = $@"select * from user
+                                                      WHERE email='&#123;email&#125;';";
+                              IConnection connection = new Connection(AppConfigValue.ConnectionString);
+                              var response = connection.GetDataSetByQuery(commandText);
+                              return response.MapSingleDataWithModel&lt;User&gt;();
+
+                          &#125;
+                          catch (Exception ex)
+                          &#123;
+                              throw new Exception(ex.Message);
+                          &#125;
+                      &#125;
+                      public async Task&lt;bool&gt; UpdateUserDetails(UserUpdateInput user)
+                      &#123;
+                          try
+                          &#123;
+                              string commandText = $@"UPDATE user
+                                  SET first_name='&#123;user.firstName&#125;', last_name='&#123;user.lastName&#125;',
+                                   email='&#123;user.email&#125;', user_name='&#123;user.userName&#125;', phone='&#123;user.phone&#125;',
+                                   image='&#123;user.imageUrl&#125;', varification='&#123;user.varification&#125;', details='&#123;user.details&#125;',
+                                   gender='&#123;user.gender&#125;', dob='&#123;user.dob&#125;', expiration='&#123;user.expiration&#125;',
+                                   last_modified=CURRENT_TIMESTAMP, last_modified_by='&#123;user.lastModifiedBy&#125;',
+                                   is_active=&#123;user.isActive&#125;, is_locked=&#123;user.isLocked&#125;
+                                  WHERE id= '&#123;user.userId&#125;' and org_id = '&#123;user.orgId&#125;';";
+
+                              IConnection connection = new Connection(AppConfigValue.ConnectionString);
+                              return connection.UpdateEntryByQuery(commandText);
+                          &#125;
+                          catch (Exception ex)
+                          &#123;
+                              throw new Exception($"Failed to update user: &#123;ex.Message&#125;");
+                          &#125;
+                      &#125;
+
+                  &#125;
+              </code>
+            </pre>
+              <br />
+              <h4>UserModel.cs</h4>
+              <pre>
+                <code class="language-csharp">
+                  public class UserController
+                  &#123;
+                    public async Task&lt;IActionResult&gt; GetUserByEmail(string email)
+                      &#123;
+                          try
+                          &#123;
+                              UserConnection userConnection = new UserConnection();
+                              var users = await userConnection.GetUserByEmail(email);
+                              return Ok(users);
+                          &#125;
+                          catch (Exception ex)
+                          &#123;
+
+                              throw new Exception(ex.Message);
+                          &#125;
+                      &#125;
+                  &#125;
+              </code>
+            </pre>
+              <hr />
+              <h4>Example project</h4>
+              <a href="https://github.com/NIHAR-SARKAR/Ado.Entity.Example" rel="noopener noreferrer nofollow"><img
+                  src="https://img.shields.io/badge/Github-Code%20Example-green?logo=github" class="img-fluid"
+                  alt="Code Example"></a>
+              <br /><br />
+            </div>
+        </div>
+          <div class="tab-pane fade" id="v-pills-Library" role="tabpanel" aria-labelledby="v-pills-Library-tab">
+            <div class="blog-post">
+              <div>
+                <img src="../../../assets/nuget.png" class="library-logo" />
+                <div>
+                  <p>Get is the package manager for .NET. The NuGet client tools provide the ability to produce and consume
+                    packages.
+                    The NuGet Gallery is the central package repository used by all package authors and consumers.</p>
+                  <div class="package-link">
+                    <a href="https://www.nuget.org/packages/Ado.Entity.Core" rel="noopener noreferrer nofollow"><img
+                        src="https://img.shields.io/nuget/v/Ado.Entity.Core.svg?style=plastic&amp;logo=nuget" class="img-fluid"
+                        alt="Ado.Entity Nuget"></a>
+                    <a href="https://github.com/Open-range-org/Ado.Entity" rel="noopener noreferrer nofollow"><img
+                        src="https://img.shields.io/badge/Github-Ado.Entity-green?logo=github" class="img-fluid" alt="Github"></a>
+                    <a href="https://github.com/Open-range-org/.github/blob/main/LICENSE" rel="noopener noreferrer nofollow"><img
+                        src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat" class="img-fluid" alt="MIT License"></a>
+                    <a href="https://github.com/Open-range-org/Ado.Entity/" rel="noopener noreferrer nofollow"><img
+                        src="https://img.shields.io/badge/build-passing-brightgreen" class="img-fluid" alt="Build Pass"></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="v-pills-Contributors" role="tabpanel" aria-labelledby="v-pills-Contributors-tab">
+            <div class="blog-post">
+              <div class="row projects">
+                <div class="col-md-10 offset-md-1">
+                  <!-- Three columns of text below the carousel -->
+                  <div class="row">
+                    <div class="col-lg-6 dev-card-block">
+                      <img class="card-projects-logo" src="../../../assets/nihar.png" width="140" height="140">
+                      <h5>Nihar Sarkar</h5>
+                      <div class="dev-link">
+                        <a href="https://github.com/NIHAR-SARKAR" class="text-dark" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://stackoverflow.com/users/4655349/nihar-sarkar?tab=profile" class="text-warning"  target="_blank"><i class="fab fa-stack-overflow"></i></a>
+                        <a href="https://www.nuget.org/profiles/NIHAR-SARKAR" class="text-info"  target="_blank"><i class="fab fa-microsoft"></i></a>
+                        <a href="https://www.npmjs.com/~nihar_sarkar" class="text-danger"  target="_blank"><i class="fab fa-npm"></i></a>
+                        <a href="https://sarkarnihar.in" target="_blank"><i class="fas fa-globe"></i></a>
+                      </div>
+                      <p class="small-text">I am in control because I want to be. I have my fingers on the switch, but have lived a lifetime ignoring
+                        the control I have over my own world. I am a programmer today! Now, I am familiar with few but most precious
+                        and important prgramming languages.
+                      </p>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
