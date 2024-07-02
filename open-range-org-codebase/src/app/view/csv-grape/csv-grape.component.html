@@ -1,0 +1,344 @@
+<main role="main" id="main" class="mb-4">
+  <div class="content-body">
+    <div class="page-header" id="page-header">
+      <div class="name-logo">
+        <img class="card-projects-logo" src="../../../assets/CsvGrape.png" width="140" height="140">
+        <div class="details px-5 py-2">
+          <h1>Csv Grape</h1>
+          Csv Grape is a library that handles csv files and its metadata for js or typescript projects. If you need to handle csv files in your typescript projects. Don't worry , this library will help you to get csv data in json format .
+        </div>
+      </div>
+
+      <div class="technical p-3">
+        <div class="technology">
+          <kbd>Typescript</kbd>
+          <kbd>Angular</kbd>
+          <kbd>React</kbd>
+          <kbd>Npm</kbd>
+        </div>
+        <div class="tag">
+          <a href="https://www.npmjs.com/package/csv-grape" rel="nofollow"><img
+              src="https://img.shields.io/npm/v/csv-grape.svg?style=plastic&amp;logo=npm" alt="Csv-Grape npm"
+              data-canonical-src="https://img.shields.io/npm/v/csv-grape.svg?style=plastic&amp;logo=npm"
+              class="me-1"></a>
+          <img src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat" class="img-fluid" alt="MIT License">
+        </div>
+
+      </div>
+    </div>
+    <div class="page-Content col-md-12" id="left-nav">
+      <div class="left-bar col-md-3" id="left-bar">
+        <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+          <div class="tab-header"><label><i class="fa-solid fa-file-signature"></i> Documentation</label></div>
+          <button class="nav-link active" id="v-pills-Introduction-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Introduction" type="button" role="tab" aria-controls="v-pills-Introduction" aria-selected="true"><i class="fa-solid fa-layer-group"></i> Introduction</button>
+          <button class="nav-link" id="v-pills-CsvContent-tab" data-bs-toggle="pill" data-bs-target="#v-pills-CsvContent" type="button" role="tab" aria-controls="v-pills-CsvContent" aria-selected="false"><i class="fa-solid fa-layer-group"></i> CsvContent</button>
+          <button class="nav-link" id="v-pills-CsvMetadata-tab" data-bs-toggle="pill" data-bs-target="#v-pills-CsvMetadata" type="button" role="tab" aria-controls="v-pills-CsvMetadata" aria-selected="false"><i class="fa-solid fa-layer-group"></i> Csv Metadata</button>
+          <button class="nav-link" id="v-pills-CsvContentwithMetadata-tab" data-bs-toggle="pill" data-bs-target="#v-pills-CsvContentwithMetadata" type="button" role="tab" aria-controls="v-pills-CsvContentwithMetadata" aria-selected="false"><i class="fa-solid fa-layer-group"></i> Csv Content with Metadata</button>
+          <button class="nav-link" id="v-pills-SampleData-tab" data-bs-toggle="pill" data-bs-target="#v-pills-SampleData" type="button" role="tab" aria-controls="v-pills-SampleData" aria-selected="false"><i class="fa-solid fa-layer-group"></i> Sample Data</button>
+          <button class="nav-link" id="v-pills-CsvGrapeExample-tab" data-bs-toggle="pill" data-bs-target="#v-pills-CsvGrapeExample" type="button" role="tab" aria-controls="v-pills-CsvGrapeExample" aria-selected="false"><i class="fa-solid fa-layer-group"></i> Example</button>
+          <div class="tab-header mt-3"><label><i class="fa-solid fa-mug-hot"></i> Tech</label></div>
+          <button class="nav-link" id="v-pills-Library-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Library" type="button" role="tab" aria-controls="v-pills-Library" aria-selected="false"><i class="fa-solid fa-layer-group"></i> Library</button>
+          <button class="nav-link" id="v-pills-Contributors-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Contributors" type="button" role="tab" aria-controls="v-pills-Contributors" aria-selected="false"><i class="fa-solid fa-layer-group"></i> Contributors</button>
+        </div>
+      </div>
+      <div class="content-text col-md-9" id="content-text">
+        <div class="tab-content" id="v-pills-tabContent">
+          <div class="tab-pane fade show active" id="v-pills-Introduction" role="tabpanel" aria-labelledby="v-pills-Introduction-tab">
+            <div class="blog-post">
+              <h2 class="blog-post-title"><i class="fas fa-quote-left"></i> Introduction</h2>
+
+              <p>A library that handles csv files and its metadata for js or typescript projects.</p>
+              <h3>Installation</h3>
+              <pre>
+                <code class="language-javaScript">
+    npm install csv-grape</code>
+              </pre>
+              <hr/>
+              <h3>Initiate the service</h3>
+              <pre>
+                <code class="language-javaScript">
+    import &#123; CsvGrape &#125; from 'csv-grape';</code>
+              </pre>
+
+            </div>
+          </div>
+          <div class="tab-pane fade" id="v-pills-CsvContent" role="tabpanel" aria-labelledby="v-pills-CsvContent-tab">
+            <div class="blog-post">
+              <h2 class="blog-post-title"><i class="fas fa-quote-left"></i> Get all csv content</h2>
+
+                <pre>
+                  <code class="language-javaScript">
+    CsvGrape.getCsvData(event,limit).then((_response)=>&#123;
+      this.data=_re
+      &#125;,(reject)=>&#123;
+      console.log(reject);
+    &#125;);
+              </code>
+                </pre>
+                <p>
+                  <span class="code">limit</span> is an optional parameter . When the file size is very big and you don't want to load full file . Use limit
+                  parameter to get limited rows from the csv file.
+                </p>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="v-pills-CsvMetadata" role="tabpanel" aria-labelledby="v-pills-CsvMetadata-tab">
+            <div class="blog-post">
+              <h2 class="blog-post-title"><i class="fas fa-quote-left"></i>  Get all csv content</h2>
+
+              <pre>
+                  <code class="language-javaScript">
+    //Here we can get _response from getCsvData(event,limit)
+    this.csvMetaData=  JSON.stringify(CsvGrape.getMetaData(_response.Content,_response.Headers));
+              </code>
+                </pre>
+              <p>
+                <span class="code">limit</span> is an optional parameter . When the file size is very big and you don't want to load full file . Use limit
+                parameter to get limited rows from the csv file.
+              </p>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="v-pills-CsvContentwithMetadata" role="tabpanel" aria-labelledby="v-pills-CsvContentwithMetadata-tab">
+            <div class="blog-post">
+              <h2 class="blog-post-title"><i class="fas fa-quote-left"></i> Get all csv content</h2>
+
+              <pre>
+                  <code class="language-javaScript">
+    CsvGrape.getCsvWithMetaData(event,limit).then((_response)=>&#123;
+      this.csvJsonAndMetaData=_response;
+      &#125;,(reject)=>&#123;
+      console.log(reject);
+    &#125;);
+              </code>
+                </pre>
+              <p>
+                <span class="code">limit</span> is an optional parameter . When the file size is very big and you don't want to load full file . Use limit
+                parameter to get limited rows from the csv file.
+              </p>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="v-pills-SampleData" role="tabpanel" aria-labelledby="v-pills-SampleData-tab">
+            <div class="blog-post">
+              <h2 class="blog-post-title"><i class="fas fa-quote-left"></i> Sample data</h2>
+
+              <p></p>
+              <pre>
+                  <code class="language-json">
+    &#123;
+        "Data": &#123;
+            "Content": [
+                &#123;
+                    "description": "description",
+                    "industry": "industry",
+                    "level": "level",
+                    "size": "size",
+                    "line_code": "line_code",
+                    "value": "value"
+                &#125;,
+                &#123;
+                    "description": "Type of outstanding debt: bank overdrafts",
+                    "industry": "total",
+                    "level": "0",
+                    "size": "619 employees",
+                    "line_code": "D0201",
+                    "value": "13215"
+                &#125;,
+                &#123;
+                    "description": "Type of outstanding debt: bank overdrafts",
+                    "industry": "total",
+                    "level": "0",
+                    "size": "2049 employees",
+                    "line_code": "D0201",
+                    "value": "3405"
+                &#125;,
+                &#123;
+                    "description": "Type of outstanding debt: bank overdrafts",
+                    "industry": "total",
+                    "level": "0",
+                    "size": "5099 employees",
+                    "line_code": "D0201",
+                    "value": "978"
+                &#125;,
+                &#123;
+                    "description": "Type of outstanding debt: bank overdrafts",
+                    "industry": "total",
+                    "level": "0",
+                    "size": "100+ employees",
+                    "line_code": "D0201",
+                    "value": "687"
+                &#125;
+            ],
+            "HasError": false,
+            "Headers": [
+                "description",
+                "industry",
+                "level",
+                "size",
+                "line_code",
+                "value"
+            ],
+            "FileName": "business-operations-survey-2022-business-finance.csv",
+            "Index": 0
+        &#125;,
+        "Metadata": &#123;
+            "description": &#123;
+                "Type": "String",
+                "Variable": "DESCRIPTION"
+            &#125;,
+            "industry": &#123;
+                "Type": "String",
+                "Variable": "INDUSTRY"
+            &#125;,
+            "level": &#123;
+                "Type": "String",
+                "Variable": "LEVEL"
+            &#125;,
+            "size": &#123;
+                "Type": "String",
+                "Variable": "SIZE"
+            &#125;,
+            "line_code": &#123;
+                "Type": "String",
+                "Variable": "LINE_CODE"
+            &#125;,
+            "value": &#123;
+                "Type": "String",
+                "Variable": "VALUE"
+            &#125;,
+            "Headers": [
+                "description",
+                "industry",
+                "level",
+                "size",
+                "line_code",
+                "value"
+            ]
+        &#125;
+    &#125;
+              </code>
+                </pre>
+              <hr>
+
+            </div>
+
+        </div>
+        <div class="tab-pane fade" id="v-pills-CsvGrapeExample" role="tabpanel" aria-labelledby="v-pills-CsvGrapeExample-tab">
+          <div class="blog-post">
+            <h2 class="blog-post-title"><i class="fas fa-quote-left"></i> Example</h2>
+            <br/><br/><br/>
+            <h3><i class="fab fa-angular"></i> Angular</h3>
+
+          <hr/>
+            <h5><i class="far fa-file"></i> app.component.ts</h5>
+            <pre>
+              <code class="language-javaScript">import &#123; Component &#125; from '@angular/core';
+                  import &#123; CsvData, CsvGrape, CsvContent&#125; from 'csv-grape';
+                  @Component(&#123;
+                    selector: 'app-root',
+                    templateUrl: './app.component.html',
+                    styleUrls: ['./app.component.css']
+                  &#125;)
+                  export class AppComponent &#123;
+                    title = 'test';
+                    data!: CsvData;
+                    csvJson:string = '';
+                    csvMetaData:string = '';
+                    csvJsonAndMetaData!:CsvContent;
+                    csvJsonAndMetaDatatext:string = '';
+                    constructor()&#123;
+                    &#125;
+                    onFileSelected(event:Event) &#123;
+                      CsvGrape.getCsvData(event,20).then((_response)=>&#123;
+                        this.data=_response;
+                        this.csvJson=JSON.stringify(this.data);
+                        this.csvMetaData=  JSON.stringify(CsvGrape.getMetaData(_response.Content,_response.Headers));
+                      &#125;,(reject)=>&#123;
+                        console.log(reject);
+                      &#125;);
+
+                      CsvGrape.getCsvWithMetaData(event,5).then((_response)=>&#123;
+                        this.csvJsonAndMetaData=_response;
+                        this.csvJsonAndMetaDatatext=JSON.stringify(_response);
+                      &#125;,(reject)=>&#123;
+                        console.log(reject);
+                      &#125;);
+                    &#125;
+
+                  &#125;
+          </code>
+            </pre>
+
+            <br/>
+            <h5><i class="far fa-file"></i> app.component.html</h5>
+            <pre>
+              <code class="language-markup">
+                  &lt;div class="content" role="main"&gt;
+                  &lt;div class="col-12 mt-5 p-5 "&gt;
+                    &lt;div class="col-8 form float-start mt-3 left"&gt;
+                      &lt;input type="file" class="form-control" name="file"
+                      id="validatedCustomFile" required multiple="multiple" (change)="onFileSelected($event)"/&gt;
+                    &lt;/div&gt;
+                    &lt;div class="col-2 form float-start mt-3 ps-3 left"&gt;
+                      &lt;button type="button"  class="form-control btn btn-warning"&gt;Upload&lt;/button&gt;
+                    &lt;/div&gt;
+                    &lt;div class="col-10 form float-start mt-3 ps-3 left"&gt;
+                      &lt;textarea style="height:200px;width: 300px;" &gt;
+                          &#123; &#123;csvJsonAndMetaDatatext&#125;&#125;
+                      &lt;/textarea&gt;
+                    &lt;/div>
+                  &lt;/div>
+              &lt;/div>
+          </code>
+            </pre>
+
+          </div>
+      </div>
+      <div class="tab-pane fade" id="v-pills-Library" role="tabpanel" aria-labelledby="v-pills-Library-tab">
+        <div class="blog-post">
+          <div>
+            <img src="../../../assets/npm.png" class="library-logo" />
+            <div>
+              <p>npm is the package manager for Node.js. It was created in 2009 as an open source project to help JavaScript
+                developers easily share packaged modules of code.
+
+                The npm Registry is a public collection of packages of open-source code for Node.js, front-end web apps, mobile
+                apps, robots, routers, and countless other needs of the JavaScript community.</p>
+              <div class="dev-link">
+                <a href="https://www.npmjs.com/package/csv-grape" rel="nofollow"><img src="https://img.shields.io/npm/v/csv-grape.svg?style=plastic&amp;logo=npm" alt="Csv-Grape npm" data-canonical-src="https://img.shields.io/npm/v/csv-grape.svg?style=plastic&amp;logo=npm" style="max-width: 100%;"></a>
+                <a href="https://github.com/Open-range-org/.github/blob/main/LICENSE" rel="noopener noreferrer nofollow"><img
+                    src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat" class="img-fluid" alt="MIT License"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="v-pills-Contributors" role="tabpanel" aria-labelledby="v-pills-Contributors-tab">
+        <div class="blog-post">
+          <div class="row projects">
+            <div class="col-md-10 offset-md-1">
+              <!-- Three columns of text below the carousel -->
+              <div class="row">
+                <div class="col-lg-6 dev-card-block">
+                  <img class="card-projects-logo" src="../../../assets/nihar.png" width="140" height="140">
+                  <h5>Nihar Sarkar</h5>
+                  <div class="dev-link">
+                    <a href="https://github.com/NIHAR-SARKAR" class="text-dark" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://stackoverflow.com/users/4655349/nihar-sarkar?tab=profile" class="text-warning"  target="_blank"><i class="fab fa-stack-overflow"></i></a>
+                    <a href="https://www.nuget.org/profiles/NIHAR-SARKAR" class="text-info"  target="_blank"><i class="fab fa-microsoft"></i></a>
+                    <a href="https://www.npmjs.com/~nihar_sarkar" class="text-danger"  target="_blank"><i class="fab fa-npm"></i></a>
+                    <a href="https://sarkarnihar.in" target="_blank"><i class="fas fa-globe"></i></a>
+                  </div>
+                  <p class="small-text">I am in control because I want to be. I have my fingers on the switch, but have lived a lifetime ignoring
+                    the control I have over my own world. I am a programmer today! Now, I am familiar with few but most precious
+                    and important prgramming languages.
+                  </p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+
+  </div>
