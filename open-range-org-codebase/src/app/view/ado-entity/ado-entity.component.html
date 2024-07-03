@@ -62,7 +62,7 @@
 
               <br />You need to import Ado.Entity Namespace'
               <pre>
-                <code class="language-csharp">
+                <code class="language-javaScript">
     using Ado.Entity.Core;</code>
               </pre>
             </div>
@@ -78,16 +78,16 @@
                   class="code">"Age(int)"</span> ,<span class="code">"DOB(datetime)"</span> then the mapping poco class is
               </p>
               <pre>
-                  <code class="language-csharp">
-      class Users:AdoBase
-      &#123;
-          [Primary]
-          public int Id &#123; get; set; &#125;
-          public string Name &#123; get; set; &#125;
-          public bool IsAdmin &#123; get; set; &#125;
-          public int Age &#123; get; set; &#125;
-          public DateTime DOB &#123; get; set; &#125;
-      &#125;</code>
+                  <code class="language-javaScript">
+    class Users:AdoBase
+    &#123;
+        [Primary]
+        public int Id &#123; get; set; &#125;
+        public string Name &#123; get; set; &#125;
+        public bool IsAdmin &#123; get; set; &#125;
+        public int Age &#123; get; set; &#125;
+        public DateTime DOB &#123; get; set; &#125;
+    &#125;</code>
                 </pre>
               <hr>
               <p><span class="text-info">Note : We can use attribute like , Primary , Unique for a property . One class can
@@ -104,7 +104,7 @@
                 sql query , which we need to pass when calling this method .</p>
               <hr>
               <pre>
-                <code class="language-csharp">
+                <code class="language-javaScript">
       public DbConnection()
       &#123;
           IConnection connection = new Connection(connectionString);
@@ -121,7 +121,7 @@
                 connection string . AddEntry helps to insert a row . we need to pass an object of class "Users" in AddEntry . Adding
                 multiple rows also possible here .</p>
                 <pre>
-                  <code class="language-csharp">//single row Add
+                  <code class="language-javaScript">//single row Add
       public DbConnection()
       &#123;
           IConnection connection = new Connection(connectionString);
@@ -137,7 +137,7 @@
                 connection string . AddEntry helps to insert a row . we need to pass an object of class "Users" in AddEntry . Adding
                 multiple rows also possible here .</p>
                 <pre>
-                  <code class="language-csharp">//multiple row Add
+                  <code class="language-javaScript">//multiple row Add
     public DbConnection()
     &#123;
         IConnection connection = new Connection(connectionString);
@@ -158,7 +158,7 @@
                 connection string . UpdateEntry helps to update data of a row . we need to pass an object of class "Users" in
                 UpdateEntry . Updating multiple rows also possible here .</p>
               <pre>
-                  <code class="language-csharp">//single row update
+                  <code class="language-javaScript">//single row update
     public DbConnection()
     &#123;
         IConnection connection = new Connection(connectionString);
@@ -174,7 +174,7 @@
                 connection string . UpdateEntry helps to update data of a row . we need to pass an object of class "Users" in
                 UpdateEntry . Updating multiple rows also possible here .</p>
               <pre>
-                  <code class="language-csharp">//multiple row update
+                  <code class="language-javaScript">//multiple row update
     public DbConnection()
     &#123;
         IConnection connection = new Connection(connectionString);
@@ -195,7 +195,7 @@
 
               <h4>UserModel.cs</h4>
               <pre>
-                  <code class="language-csharp">[Table("user")]
+                  <code class="language-javaScript">[Table("user")]
                     public class User
                     &#123;
                         [Column("id")]
@@ -218,7 +218,7 @@
               <hr /><br />
               <h4>UserConnection.cs</h4>
               <pre>
-                <code class="language-csharp">
+                <code class="language-javaScript">
                   public class UserConnection
                   &#123;
                     public async Task&lt;bool&gt; AddUser(User user)
@@ -257,12 +257,7 @@
                           &#123;
                               string commandText = $@"UPDATE user
                                   SET first_name='&#123;user.firstName&#125;', last_name='&#123;user.lastName&#125;',
-                                   email='&#123;user.email&#125;', user_name='&#123;user.userName&#125;', phone='&#123;user.phone&#125;',
-                                   image='&#123;user.imageUrl&#125;', varification='&#123;user.varification&#125;', details='&#123;user.details&#125;',
-                                   gender='&#123;user.gender&#125;', dob='&#123;user.dob&#125;', expiration='&#123;user.expiration&#125;',
-                                   last_modified=CURRENT_TIMESTAMP, last_modified_by='&#123;user.lastModifiedBy&#125;',
-                                   is_active=&#123;user.isActive&#125;, is_locked=&#123;user.isLocked&#125;
-                                  WHERE id= '&#123;user.userId&#125;' and org_id = '&#123;user.orgId&#125;';";
+                                   email='&#123;user.email&#125;', user_name='&#123;user.userName&#125;', phone='&#123;user.phone&#125;';";
 
                               IConnection connection = new Connection(AppConfigValue.ConnectionString);
                               return connection.UpdateEntryByQuery(commandText);
@@ -279,7 +274,7 @@
               <br />
               <h4>UserModel.cs</h4>
               <pre>
-                <code class="language-csharp">
+                <code class="language-javaScript">
                   public class UserController
                   &#123;
                     public async Task&lt;IActionResult&gt; GetUserByEmail(string email)
