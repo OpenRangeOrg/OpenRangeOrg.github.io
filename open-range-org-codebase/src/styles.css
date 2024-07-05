@@ -1,3 +1,7 @@
+body{
+  overflow-x: hidden;
+  font-family: 'Exo 2', sans-serif;
+}
 .menu-logo{
   height: 35px;
   margin-left: 20px;
@@ -18,9 +22,7 @@
 #footer{
   margin-top: 20px;
 }
-body{
-  overflow-x: hidden;
-}
+
 .card-projects-logo{
   border-radius: 80px;
   border: 2px solid #aaa;
