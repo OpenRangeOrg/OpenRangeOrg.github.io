@@ -221,6 +221,7 @@
                 <code class="language-javaScript">
                   public class UserConnection
                   &#123;
+                    //Add a row in table
                     public async Task&lt;bool&gt; AddUser(User user)
                       &#123;
                           try
@@ -235,6 +236,8 @@
                               throw new Exception(ex.Message);
                           &#125;
                       &#125;
+
+                      //get a single row
                       public async Task&lt;User&gt; GetUserByEmail(string email)
                       &#123;
                           try
@@ -251,6 +254,24 @@
                               throw new Exception(ex.Message);
                           &#125;
                       &#125;
+
+                      //get list of rows
+                      public async Task&lt;List&lt;User&gt;&gt; GetUserList()
+                        &#123;
+                            try
+                            &#123;
+                                string commandText = $@"select * user;";
+                                IConnection connection = new DbConnection();
+                                var response = connection.GetDataSetByQuery(commandText);
+                                return response.MapDataWithModel&lt;User&gt;();
+
+                            &#125;
+                            catch (Exception ex)
+                            &#123;
+                                throw new Exception(ex.Message);
+                            &#125;
+                         &#125;
+                      //update Row(s)
                       public async Task&lt;bool&gt; UpdateUserDetails(UserUpdateInput user)
                       &#123;
                           try
@@ -272,7 +293,7 @@
               </code>
             </pre>
               <br />
-              <h4>UserModel.cs</h4>
+              <h4>UserController.cs</h4>
               <pre>
                 <code class="language-javaScript">
                   public class UserController

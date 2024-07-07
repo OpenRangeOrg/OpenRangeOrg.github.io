@@ -1,0 +1,216 @@
+<main role="main" id="main" class="mb-4">
+  <div class="content-body">
+    <div class="page-header" id="page-header">
+      <div class="name-logo">
+        <img class="card-projects-logo" src="../../../assets/googlyjs.png" width="140" height="140">
+        <div class="details px-5 py-2">
+          <h1>Googly.js</h1>
+          Googly.js is a lightweight JavaScript validation library. If you’re unfamiliar with handling validation in
+          JavaScript or if you’re looking for a library to assist with validation, Googly.js is a great choice.
+        </div>
+      </div>
+
+      <div class="technical p-3">
+        <div class="technology">
+          <kbd>javascript</kbd>
+          <kbd>html</kbd>
+        </div>
+        <div class="tag header-custom">
+          <img src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat" class="img-fluid" alt="MIT License">
+
+          <a href="https://open-range-org.github.io/demo/GooglyJs/" rel="noopener noreferrer nofollow" target="_blank">
+            <i class="fas fa-solid fa-link"></i> Demo</a>
+
+          <a href="https://github.com/Open-range-org/googly.js" rel="noopener noreferrer nofollow"><i
+            class="fab fa-github"></i></a>
+        </div>
+
+      </div>
+    </div>
+    <div class="page-Content col-md-12" id="left-nav">
+      <div class="left-bar col-md-3" id="left-bar">
+        <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+          <div class="tab-header"><label><i class="fa-solid fa-file-signature"></i> Documentation</label></div>
+          <button class="nav-link active" id="v-pills-Introduction-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Introduction" type="button" role="tab" aria-controls="v-pills-Introduction" aria-selected="true"><i class="fa-solid fa-layer-group"></i> Introduction</button>
+          <button class="nav-link" id="v-pills-Require-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Require" type="button" role="tab" aria-controls="v-pills-Require" aria-selected="false"><i class="fa-solid fa-layer-group"></i> Require Field</button>
+          <button class="nav-link" id="v-pills-Expression-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Expression" type="button" role="tab" aria-controls="v-pills-Expression" aria-selected="false"><i class="fa-solid fa-layer-group"></i> Expression</button>
+          <button class="nav-link" id="v-pills-Remain-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Remain" type="button" role="tab" aria-controls="v-pills-Remain" aria-selected="false"><i class="fa-solid fa-layer-group"></i> Remain</button>
+          <button class="nav-link" id="v-pills-Compare-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Compare" type="button" role="tab" aria-controls="v-pills-Compare" aria-selected="false"><i class="fa-solid fa-layer-group"></i> Compare</button>
+          <button class="nav-link" id="v-pills-Strength-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Strength" type="button" role="tab" aria-controls="v-pills-Strength" aria-selected="false"><i class="fa-solid fa-layer-group"></i> Strength tag</button>
+          <div class="tab-header mt-3"><label><i class="fa-solid fa-mug-hot"></i> Tech</label></div>
+          <button class="nav-link" id="v-pills-Contributors-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Contributors" type="button" role="tab" aria-controls="v-pills-Contributors" aria-selected="false"><i class="fa-solid fa-layer-group"></i> Contributors</button>
+        </div>
+      </div>
+      <div class="content-text col-md-9" id="content-text">
+        <div class="tab-content" id="v-pills-tabContent">
+          <div class="tab-pane fade show active" id="v-pills-Introduction" role="tabpanel" aria-labelledby="v-pills-Introduction-tab">
+            <div class="blog-post">
+              <h2 class="blog-post-title"><i class="fas fa-quote-left"></i> Introduction</h2>
+
+              <p>Googly.js is a lightweight JavaScript validation library. If you’re unfamiliar with handling validation in
+                JavaScript or if you’re looking for a library to assist with validation, Googly.js is a great choice.</p>
+              <h4>Installation</h4>
+              <hr />
+              To use this library, which relies on jQuery as its base JavaScript library, follow these steps:
+              Include jQuery: Make sure you add jQuery to your project. Download “googly.js”: Obtain the “googly.js” file from
+              either GitHub or CDN. You can find it there and include it in your project.
+              By following these steps, you’ll have both jQuery and the “googly.js” library available for your web application.
+              <pre>
+                <code class="language-javaScript">
+    &lt;script src="https://code.jquery.com/jquery-3.7.1.min.js"&gt;&lt;/script&gt;
+    &lt;script src="./dist/googly.min.js"&gt;&lt;/script&gt;
+                </code>
+              </pre>
+              <br />
+            </div>
+          </div>
+          <div class="tab-pane fade" id="v-pills-Require" role="tabpanel" aria-labelledby="v-pills-Require-tab">
+
+            <div class="blog-post">
+              <h2 class="blog-post-title"><i class="fas fa-quote-left"></i> validate Required field</h2>
+
+              <p>To perform required validation, use the valid tag with the type attribute set to require<br />
+              <ul>
+                <li>Map the for attribute to the corresponding text input field by setting its value to the same ID as the text
+                  input field.</li>
+                <li>Customize the validation message by specifying the desired content for the message attribute.</li>
+                <li>If you want to style the custom message with a specific color, apply your custom CSS class. For instance, if
+                  you’re using the Bootstrap CSS library and want a red-colored message, use the “text-danger” class.</li>
+              </ul>
+              <hr>
+              <pre>
+                <code class="language-html">
+    &lt;input type="text" placeholder="Enter Id Number" id="idnum" class="form-control" /&gt;
+    &lt;valid type="require" for="idnum" msg="Please insert Id number" class="text-danger"&gt;&lt;/valid&gt;
+            </code>
+              </pre>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="v-pills-Expression" role="tabpanel" aria-labelledby="v-pills-Expression-tab">
+            <div class="blog-post">
+              <h2 class="blog-post-title"><i class="fas fa-quote-left"></i> validate expression field</h2>
+
+              <p>To perform expression validation, use the valid tag with the type attribute set to expression<br />
+              <ul>
+                <li>Map the for attribute to the corresponding text input field by setting its value to the same ID as the text input field.</li>
+                <li>Customize the validation message by specifying the desired content for the message attribute.</li>
+                <li>Customize the validation message by specifying the desired content for the message attribute.nstance, if
+                  yoCustomize the validation message by specifying the desired content for the message attribute.</li>
+                <li>mode attribute helps to check expression . need to mention what type of expression you want to validate . 4 options available :
+                  <ul>
+                    <li>num : Only numbers are allowed</li>
+                    <li>char : Only characters are allowed"</li>
+                    <li>pass : Only Number and Characters are allowed</li>
+                    <li>mail : o=Only valid email pattern allowed</li>
+                  </ul>
+                </li>
+                <li>If you want to style the custom message with a specific color, apply your custom CSS class. For instance, if you’re using the Bootstrap CSS library and want a red-colored message, use the “text-danger” class."</li>
+              </ul>
+              <hr>
+              <pre>
+                <code class="language-html">
+    &lt;input type="text" placeholder="Enter Firstname" id="fname" class="form-control" /&gt;
+    &lt;valid type="expression" for="fname" mode="char"
+     msg="Only characters are allowed" class="text-danger"&gt;&lt;/valid&gt;
+            </code>
+              </pre>
+            </div>
+          </div>
+        <div class="tab-pane fade" id="v-pills-Remain" role="tabpanel" aria-labelledby="v-pills-Remain-tab">
+          <div class="blog-post">
+            <h2 class="blog-post-title"><i class="fas fa-quote-left"></i> Remain field</h2>
+
+            <p>To limit the maximum character count for a field and display the remaining characters to be typed, you can
+                utilize the “remain” attribute.<br />
+            <ul>
+                <li>Add the “maxlength” attribute to the input field. Set its value to a numeric limit representing the maximum
+                    allowed characters.</li>
+                <li>To perform character remain calculation , use the valid tag with the type attribute set to remain</li>
+                <li>Map the for attribute to the corresponding text input field by setting its value to the same ID as the text
+                    input field.</li>
+                <li>If you want to style the custom message with a specific colour, apply your custom CSS class. For instance,
+                    if you’re using the Bootstrap CSS library and want a red-colored message, use the “text-danger” class.</li>
+            </ul>
+            <hr>
+            <pre>
+              <code class="language-html">
+    &lt;textarea class="form-control" rows="10" cols="30" maxlength="250" data-validation="remain" id="textarea"&gt;&lt;/textarea&gt;
+    &lt;valid type="remain" for="textarea" class="text-info"&gt;&lt;/valid&gt;
+          </code>
+            </pre>
+        </div>
+      </div>
+
+    <div class="tab-pane fade" id="v-pills-Compare" role="tabpanel" aria-labelledby="v-pills-Compare-tab">
+      <div class="blog-post">
+        <h2 class="blog-post-title"><i class="fas fa-quote-left"></i> Compare field</h2>
+
+        <p>To compare values between two input fields, use the following validator:<br/>
+          <ul>
+            <li>Add the valid tag to the input field where you want to perform the comparison. Set the type attribute to compare.</li>
+            <li>Map the for attribute of the validator to the corresponding text input field by setting its value to the same ID as the text input field you want to compare (let’s call this (1)).</li>
+            <li>Map the with attribute of the validator to the other text input field by setting its value to the same ID as the second text input field (let’s call this (2)).</li>
+            <li>If the values of (1) and (2) don’t match, an error message saying Mismatch! will be displayed.</li>
+          </ul>
+        <hr>
+        <pre>
+          <code class="language-html">
+    &lt;input type="password" placeholder="Enter Pass" id="pass" class="form-control" /&gt;
+    &lt;input type="password" placeholder="Confirm Pass" id="confpass" class="form-control" /&gt;
+    &lt;valid type="compare" for="confpass" with="pass"&gt;&lt;/valid&gt;
+        </code>
+        </pre>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="v-pills-Strength" role="tabpanel" aria-labelledby="v-pills-Strength-tab">
+      <div class="blog-post">
+        <h2 class="blog-post-title"><i class="fas fa-quote-left"></i> validate expression field</h2>
+
+        <p>To assess password strength and complexity, you can utilize the strength tag. This tag validates the following criteria: <br/>
+        <ul>
+          <li>Lowercase characters</li>
+          <li>Uppercase characters</li>
+          <li>Special characters</li>
+          <li>Numbers Additionally, it considers the total length of the password.</li>
+          </ul>
+          Map the for attribute to the corresponding input field by setting its value to the same ID as the text input field.
+        <hr>
+        <pre>
+          <code class="language-html">
+    &lt;input type="password" placeholder="Enter Pass" id="pass" class="form-control"  /&gt;
+    &lt;strength for="pass"&gt;&lt;/strength&gt;
+      </code>
+        </pre>
+      </div>
+    </div>
+      <div class="tab-pane fade" id="v-pills-Contributors" role="tabpanel" aria-labelledby="v-pills-Contributors-tab">
+        <div class="blog-post">
+          <div class="row projects">
+            <div class="col-md-10 offset-md-1">
+              <!-- Three columns of text below the carousel -->
+              <div class="row">
+                <div class="col-lg-6 dev-card-block">
+                  <img class="card-projects-logo" src="../../../assets/nihar.png" width="140" height="140">
+                  <h5>Nihar Sarkar</h5>
+                  <div class="dev-link">
+                    <a href="https://github.com/NIHAR-SARKAR" class="text-dark" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://stackoverflow.com/users/4655349/nihar-sarkar?tab=profile" class="text-warning"  target="_blank"><i class="fab fa-stack-overflow"></i></a>
+                    <a href="https://www.nuget.org/profiles/NIHAR-SARKAR" class="text-info"  target="_blank"><i class="fab fa-microsoft"></i></a>
+                    <a href="https://www.npmjs.com/~nihar_sarkar" class="text-danger"  target="_blank"><i class="fab fa-npm"></i></a>
+                    <a href="https://sarkarnihar.in" target="_blank"><i class="fas fa-globe"></i></a>
+                  </div>
+                  <p class="small-text">I am in control because I want to be. I have my fingers on the switch, but have lived a lifetime ignoring
+                    the control I have over my own world. I am a programmer today! Now, I am familiar with few but most precious
+                    and important prgramming languages.
+                  </p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+
+  </div>
