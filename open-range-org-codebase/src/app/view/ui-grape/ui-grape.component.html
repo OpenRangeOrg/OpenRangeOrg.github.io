@@ -1,0 +1,364 @@
+
+<main role="main" id="main" class="mb-4">
+  <div class="content-body">
+    <div class="page-header" id="page-header">
+      <div class="name-logo">
+        <img class="card-projects-logo" src="../../../assets/UIGrape.png" width="140" height="140">
+        <div class="details px-5 py-2">
+          <h1>UI Grape</h1>
+          UI Grape is a react.js library comprised of all the useful components with dynamic options . Here you will get prebuilt UI
+          components and ui designs . You can customize these components based on your requirement .
+        </div>
+      </div>
+
+      <div class="technical p-3">
+        <div class="technology">
+          <kbd>Typescript</kbd>
+          <kbd>React</kbd>
+          <kbd>Npm</kbd>
+        </div>
+        <div class="tag">
+          <a href="https://www.npmjs.com/package/ui-grape" rel="nofollow"><img
+              src="https://img.shields.io/npm/v/ui-grape.svg?style=plastic&amp;logo=npm" alt="UI-Grape npm"
+              data-canonical-src="https://img.shields.io/npm/v/csv-grape.svg?style=plastic&amp;logo=npm"
+              class="pe-1"></a>
+          <img src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat" class="img-fluid" alt="MIT License">
+        </div>
+
+      </div>
+    </div>
+    <div class="page-Content col-md-12" id="left-nav">
+      <div class="left-bar col-md-3" id="left-bar">
+        <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+          <div class="tab-header"><label><i class="fa-solid fa-file-signature"></i> Documentation</label></div>
+          <button class="nav-link active" id="v-pills-Introduction-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Introduction" type="button" role="tab" aria-controls="v-pills-Introduction" aria-selected="true"><i class="fa-solid fa-layer-group"></i> Introduction</button>
+          <button class="nav-link" id="v-pills-Button-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Button" type="button" role="tab" aria-controls="v-pills-Button" aria-selected="false"><i class="fa-solid fa-layer-group"></i> Button</button>
+          <button class="nav-link" id="v-pills-Card-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Card" type="button" role="tab" aria-controls="v-pills-Card" aria-selected="false"><i class="fa-solid fa-layer-group"></i> Card</button>
+          <button class="nav-link" id="v-pills-Menu-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Menu" type="button" role="tab" aria-controls="v-pills-Menu" aria-selected="false"><i class="fa-solid fa-layer-group"></i> Menu</button>
+          <button class="nav-link" id="v-pills-Modal-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Modal" type="button" role="tab" aria-controls="v-pills-Modal" aria-selected="false"><i class="fa-solid fa-layer-group"></i> Modal</button>
+          <button class="nav-link" id="v-pills-Tab-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Tab" type="button" role="tab" aria-controls="v-pills-Tab" aria-selected="false"><i class="fa-solid fa-layer-group"></i> Tab</button>
+          <button class="nav-link" id="v-pills-Toast-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Toast" type="button" role="tab" aria-controls="v-pills-Toast" aria-selected="false"><i class="fa-solid fa-layer-group"></i> Toast</button>
+          <div class="tab-header mt-3"><label><i class="fa-solid fa-mug-hot"></i> Tech</label></div>
+          <button class="nav-link" id="v-pills-Library-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Library" type="button" role="tab" aria-controls="v-pills-Library" aria-selected="false"><i class="fa-solid fa-layer-group"></i> Library</button>
+          <button class="nav-link" id="v-pills-Contributors-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Contributors" type="button" role="tab" aria-controls="v-pills-Contributors" aria-selected="false"><i class="fa-solid fa-layer-group"></i> Contributors</button>
+        </div>
+      </div>
+      <div class="content-text col-md-9" id="content-text">
+        <div class="tab-content" id="v-pills-tabContent">
+          <div class="tab-pane fade show active" id="v-pills-Introduction" role="tabpanel" aria-labelledby="v-pills-Introduction-tab">
+            <div class="blog-post">
+              <h2 class="blog-post-title"><i class="fas fa-quote-left"></i> Introduction</h2>
+
+              <p>UI Grape is a react.js library comprised of all the useful components with dynamic options . Here you will get
+                prebuilt UI components and ui designs . You can customize these components based on your requirement .</p>
+              <h4>Installation</h4>
+              <pre>
+                <code class="language-javaScript">
+    npm install ui-grape</code>
+              </pre>
+              <hr />
+              <h4>Initiate the service</h4>
+              <pre>
+                <code class="language-javaScript">
+    import &#123; ComponentName &#125; from 'ui-grape';</code>
+              </pre>
+              <br/>
+              <div>
+                To use icons you need to install <span class="code"> {{'@'}}fortawesome/free-solid-svg-icons</span> library
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="v-pills-Button" role="tabpanel" aria-labelledby="v-pills-Button-tab">
+            <div class="blog-post">
+              <h2 class="blog-post-title"><i class="fas fa-quote-left"></i> Button Component</h2>
+              <br/>
+              <h4>Import</h4>
+              <pre>
+                <code class="language-javaScript">
+    import &#123; Button &#125; from 'ui-grape';
+    import &#123; faBell &#125; from '{{'@'}}fortawesome/free-solid-svg-icons';</code>
+              </pre>
+              <br/>
+              <h4>Code Example</h4>
+              <p>The Button component allows you to create simple Buttons. Here's an example of how you can use it:</p>
+              <pre>
+                  <code class="language-markup">
+    &lt;Button
+      children= 'Ui Grape Button'
+      rightIcon= &#123;faBell&#125;
+      type= 'danger'
+      size= 'small'
+    /&gt;
+              </code>
+                </pre>
+            </div>
+
+          </div>
+          <div class="tab-pane fade" id="v-pills-Card" role="tabpanel" aria-labelledby="v-pills-Card-tab">
+            <div class="blog-post">
+              <h2 class="blog-post-title"><i class="fas fa-quote-left"></i> Card Component</h2>
+              <br/>
+              <h4>Import</h4>
+              <pre>
+                <code class="language-javaScript">
+    import &#123; Card &#125; from 'ui-grape';
+    import &#123; faCheckCircle &#125; from '{{'@'}}fortawesome/free-solid-svg-icons';</code>
+              </pre>
+              <br/>
+              <h4>Code Example</h4>
+              <p>The Card component allows you to create simple cards. Here's an example of how you can use it:</p>
+              <pre>
+                  <code class="language-markup">
+    &lt;Card
+      children="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+      icon= &#123;faCheckCircle&#125;
+      type= 'success'
+      width= '300px'
+      heading= "Card with icon"
+    / &gt;
+              </code>
+                </pre>
+            </div>
+
+          </div>
+          <div class="tab-pane fade" id="v-pills-Menu" role="tabpanel" aria-labelledby="v-pills-Menu-tab">
+            <div class="blog-post">
+              <h2 class="blog-post-title"><i class="fas fa-quote-left"></i> Menu Component</h2>
+              <br />
+              <h4>Import</h4>
+              <pre>
+                <code class="language-javaScript">import &#123; Menu &#125; from 'ui-grape';
+                import &#123; faHome, faUser, faCog &#125; from '{{'@'}}fortawesome/free-solid-svg-icons';</code>
+              </pre>
+              <br />
+              <h4>Code Example</h4>
+              <p>Import the Menu component and FontAwesome icons in your project:</p>
+              <pre>
+                  <code class="language-javaScript">
+    const menuItems = [
+      &#123; label: 'Home', icon: faHome, onClick: () => console.log('Home clicked') &#125;,
+      &#123; label: 'Profile', icon: faUser, onClick: () => console.log('Profile clicked') &#125;,
+      &#123; label: 'Settings', icon: faCog, onClick: () => console.log('Settings clicked') &#125;,
+      &#123; label: 'Open', onClick: () => console.log('Open clicked') &#125;,
+    ];
+
+    &lt;Menu items=&#123;menuItems&#125; /&gt;
+              </code>
+                </pre>
+              <hr />
+              <h4>Customized Menu</h4>
+              <pre>
+                  <code class="language-markup">
+    const menuItems = [
+      &#123; label: 'Home', icon: faHome, onClick: () => console.log('Home clicked') &#125;,
+      &#123; label: 'Profile', icon: faUser, onClick: () => console.log('Profile clicked') &#125;,
+      &#123; label: 'Settings', icon: faCog, onClick: () => console.log('Settings clicked') &#125;,
+      &#123; label: 'Documents', icon: faFolder, onClick: () => console.log('Documents clicked') &#125;,
+      &#123; label: 'Analytics', icon: faChartBar, onClick: () => console.log('Analytics clicked') &#125;,
+      &#123; label: 'Messages', icon: faEnvelope, onClick: () => console.log('Messages clicked') &#125;,
+    ];
+
+              &lt;Menu items=&#123;menuItems&#125; size="medium" /&gt;
+              </code>
+                </pre>
+              <div>
+                Adjust the menuItems array according to your requirements, and customize the menu appearance using props like size.
+              <ul>
+                <li>items: An array of objects representing menu items. Each object should have a label (string), an optional icon
+                  (FontAwesomeIcon), and an optional onClick function.</li>
+                <li>size (optional): Size of the menu items. It can be set to 'small' or 'medium'.</li>
+              </ul>
+            </div>
+            </div>
+
+          </div>
+          <div class="tab-pane fade" id="v-pills-Modal" role="tabpanel" aria-labelledby="v-pills-Modal-tab">
+            <div class="blog-post">
+              <h2 class="blog-post-title"><i class="fas fa-quote-left"></i> Modal Component</h2>
+              <br />
+              <h4>Import</h4>
+              <pre>
+                <code class="language-javaScript">
+    import &#123; Modal  &#125; from 'ui-grape';
+    import &#123; faCheck, faBell &#125; from '{{'@'}}fortawesome/free-solid-svg-icons';</code>
+              </pre>
+              <br />
+              <h4>Code Example</h4>
+              <p>The Button component allows you to create simple Buttons. Here's an example of how you can use it:</p>
+              <pre>
+                  <code class="language-markup">
+    const children = &lt;div&gt;
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+        &lt;br/&gt;
+        &lt;button&gt;Test&lt;/button&gt;
+       &lt;/div&gt;
+
+       &lt;Modal
+         heading= 'Modal screen 1'
+         children= &#123;children&#125;
+         buttonRight= &#123;
+           children: 'Forward',
+           rightIcon: faCheck,
+           type: 'success',
+           size: 'small'
+         &#125;
+         buttonLeft= &#123;
+           children: 'cancel',
+           type: 'danger',
+           size: 'small'
+         &#125;
+         icon= &#123;faBell&#125;,
+         type= 'primary',
+         width= "500px",
+         onClose: () => null
+     /&gt;
+              </code>
+                </pre>
+            </div>
+
+          </div>
+          <div class="tab-pane fade" id="v-pills-Tab" role="tabpanel" aria-labelledby="v-pills-Tab-tab">
+            <div class="blog-post">
+              <h2 class="blog-post-title"><i class="fas fa-quote-left"></i> Tab Component</h2>
+              <br/>
+              <h4>Import</h4>
+              <pre>
+                <code class="language-javaScript">import &#123; Tab &#125; from 'ui-grape';</code>
+              </pre>
+              <br/>
+              <h4>Code Example</h4>
+              <p>The Tab component provides a simple and customizable tab interface. Here's an example of how you can use it:</p>
+              <pre>
+                  <code class="language-javaScript">
+    const tabs = [
+      &#123;
+        label: 'Tab 1',
+        content: "This is Tab 1",
+        badgeCount: 0,
+        errorBadge: false
+      &#125;,
+      &#123;
+        label: 'Tab 2',
+        content: "This is Tab 2",
+        badgeCount: 0,
+        errorBadge: false
+      &#125;,
+      &#123;
+        label: 'Tab 3',
+        content: "This is Tab 3",
+        badgeCount: 0,
+        errorBadge: false
+      &#125;
+    ];
+    &lt;Tab tabs=&#123;tabs&#125;/&gt;
+              </code>
+                </pre>
+            </div>
+
+          </div>
+          <div class="tab-pane fade" id="v-pills-Toast" role="tabpanel" aria-labelledby="v-pills-Toast-tab">
+            <div class="blog-post">
+              <h2 class="blog-post-title"><i class="fas fa-quote-left"></i> Toast Component</h2>
+              <br />
+              <h4>Import</h4>
+              <pre>
+                <code class="language-javaScript">import &#123; Toast &#125; from 'ui-grape';
+                import &#123; faCheckCircle &#125; from '{{'@'}}fortawesome/free-solid-svg-icons';</code>
+              </pre>
+              <br />
+              <h4>Code Example</h4>
+              <p>The Toast component allows you to create simple toast notifications. Here's an example of how you can use it:</p>
+              <pre>
+                  <code class="language-markup">
+    &lt;Toast
+      message="This toast will stay for 5 seconds."
+      duration=&#123;5000&#125;
+      type="warning"
+      position="bottom-right"
+      padding="medium"
+      fontColor="#ff9800"
+    /&gt;
+              </code>
+                </pre>
+              <div>
+                In this example:
+              <ul>
+                <li>The first toast is a basic notification.</li>
+                <li>The second toast includes a success icon.</li>
+                <li>The third toast is customized with a longer duration, a warning type, a specific position and a larger padding.
+                  Adjust the props according to your requirements and styling preferences.</li>
+              </ul>
+            </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="v-pills-Library" role="tabpanel" aria-labelledby="v-pills-Library-tab">
+
+            <div class="blog-post">
+              <div>
+                <img src="../../../assets/npm.png" class="library-logo" />
+                <div>
+                  <p>npm is the package manager for Node.js. It was created in 2009 as an open source project to help JavaScript
+                    developers easily share packaged modules of code.
+
+                    The npm Registry is a public collection of packages of open-source code for Node.js, front-end web apps, mobile
+                    apps, robots, routers, and countless other needs of the JavaScript community.</p>
+                  <div class="dev-link">
+                    <a href="https://www.npmjs.com/package/ui-grape" rel="nofollow"><img src="https://img.shields.io/npm/v/ui-grape.svg?style=plastic&amp;logo=npm" alt="Csv-Grape npm" data-canonical-src="https://img.shields.io/npm/v/csv-grape.svg?style=plastic&amp;logo=npm" style="max-width: 100%;"></a>
+                    <a href="https://github.com/Open-range-org/.github/blob/main/LICENSE" rel="noopener noreferrer nofollow"><img
+                        src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat" class="img-fluid" alt="MIT License"></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+      <div class="tab-pane fade" id="v-pills-Contributors" role="tabpanel" aria-labelledby="v-pills-Contributors-tab">
+        <div class="blog-post">
+          <div class="row projects">
+            <div class="col-md-10 offset-md-1">
+              <div class="row">
+                <div class="col-lg-4 dev-card-block">
+                  <img class="card-projects-logo" src="../../../assets/nihar.png" width="140" height="140">
+                  <h5>Nihar Sarkar</h5>
+                  <div class="dev-link">
+                    <a href="https://github.com/NIHAR-SARKAR" class="text-dark" target="_blank"><i
+                        class="fab fa-github"></i></a>
+                    <a href="https://stackoverflow.com/users/4655349/nihar-sarkar?tab=profile" class="text-warning"
+                      target="_blank"><i class="fab fa-stack-overflow"></i></a>
+                    <a href="https://www.nuget.org/profiles/NIHAR-SARKAR" class="text-info" target="_blank"><i
+                        class="fab fa-microsoft"></i></a>
+                    <a href="https://www.npmjs.com/~nihar_sarkar" class="text-danger" target="_blank"><i
+                        class="fab fa-npm"></i></a>
+                    <a href="https://sarkarnihar.in" target="_blank"><i class="fas fa-globe"></i></a>
+                  </div>
+                  <p class="small-text">Innovative tech professional with 7 years of experience working as a computer
+                    programmer. Capable of working with a variety of technology and software solutions and managing databases.
+                    Valuable team member who has experience diagnosing problems and developing solutions.
+                  </p>
+                </div>
+
+                <div class="col-lg-4 dev-card-block">
+                  <img class="card-projects-logo" src="../../../assets/priyam.jpg" width="140" height="140">
+                  <h5>Priyam Chatterjee</h5>
+                  <div class="dev-link">
+                    <a href="#" class="text-dark" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="#" class="text-danger" target="_blank"><i class="fab fa-npm"></i></a>
+                    <a href="#" target="_blank"><i class="fas fa-globe"></i></a>
+                  </div>
+                  <p class="small-text">I am in control because I want to be. I have my fingers on the switch, but have lived a
+                    lifetime ignoring
+                    the control I have over my own world. I am a programmer today! Now, I am familiar with few but most precious
+                    and important prgramming languages.
+                  </p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+
+  </div>
